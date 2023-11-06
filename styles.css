@@ -1,0 +1,274 @@
+/* Apply a background image to the body and set its properties */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fff; /* Set the background color to white */
+}
+
+/* Style the header with a semi-transparent background and text */
+header {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2; /* Ensure header appears on top */
+  grid-area: header;
+  background-color: #333;
+}
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Style the "Rent Nest" heading */
+header h1 {
+  color: #fff;
+  font-size: 36px;
+  margin: 0;
+}
+
+/* Style the navigation menu on the right */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  position: relative;
+  z-index: 2; /* Ensure menu appears on top */
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+/* Style the slideshow container */
+.slideshow {
+  position: absolute;
+  top: 60px; /* Adjust this value to position the slideshow below the header */
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 60px); /* Adjust for the header's height */
+  z-index: 1; /* Ensure slideshow appears behind the content */
+}
+
+/* Style your slides and their content */
+.slide {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 1s ease-in-out;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Align text to the bottom of the slide */
+}
+
+.slide-content {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  width: 100%; /* Expand content to full width of the slide */
+  position: absolute; /* Position content within the slide */
+  bottom: 0; /* Align content to the bottom */
+}
+
+.slide h3 {
+  font-size: 24px;
+  margin: 0;
+  font-family: "Your-Font-Here", sans-serif; /* Replace 'Your-Font-Here' with your desired font name */
+}
+
+.slide p {
+  font-size: 18px;
+  margin: 0;
+  color: #000; /* Text color for the slides */
+  font-family: "Your-Font-Here", sans-serif; /* Replace 'Your-Font-Here' with your desired font name */
+}
+
+/* Style the navigation buttons */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  z-index: 2; /* Ensure buttons appear on top of the slideshow */
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Διαίρεση σελίδας σε δύο στήλες με αναλογία 1:1 */
+  gap: 1rem; /* Απόσταση μεταξύ των στοιχείων */
+  padding: 1rem;
+  max-width: 1500px;
+  margin: 0 auto;
+  overflow-y: auto;
+  overflow-x: auto;
+  height: 100vh;
+}
+.categories a {
+  color: black;
+}
+
+/* home-rentals css */
+
+.home__rentals {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.home__rentals h3 {
+  font-size: 24px;
+}
+
+.home__rentals img {
+  width: 100%;
+  height: auto;
+}
+
+/* about css */
+.team_member_1,
+.team_member_2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.member_1,
+.member_2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  background-color: #f4f4f4;
+}
+
+.team_member_1 img {
+  width: 150px;
+}
+
+.team_member_2 img {
+  width: 150px;
+}
+
+/* contact-form css */
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1500px;
+  margin: 0 auto;
+  overflow-y: auto;
+  overflow-x: auto;
+  height: 100vh;
+}
+
+.contact-form h2 {
+  grid-column: span 2;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.contact-form label {
+  font-weight: bold;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.contact-form input[type="submit"] {
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  border: none;
+  padding: 15px 20px;
+  font-size: 16px;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* home-rentals-123 css */
+.ad_details_123 h2 {
+  margin-top: 20px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.ad_details_123 img {
+  width: 35%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.ad_details_123 table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.ad_details_123 table,
+.ad_details_123 th,
+.ad_details_123 td {
+  border: 1px solid #333;
+  border-collapse: collapse;
+  padding: 10px;
+  text-align: left;
+}
+
+.ad_details_123 th {
+  background-color: #333;
+  color: white;
+}
+
+.ad_details_123 {
+  max-width: 1500px;
+  margin: 0 auto;
+  overflow-y: auto;
+  overflow-x: auto;
+  height: 100vh;
+}
